@@ -1,0 +1,100 @@
+:root {
+    /* === Colors === */
+
+    /* == Primary == */
+    --marine-blue: hsl(213, 96%, 18%);
+    --purplish-blue: hsl(243, 100%, 62%);
+    --pastel-blue: hsl(228, 100%, 84%);
+    --light-blue: hsl(206, 94%, 87%);
+    --strawberry-red: hsl(354, 84%, 57%);
+
+    /* == Neutral == */
+    --cool-gray: hsl(231, 11%, 63%);
+    --light-gray: hsl(229, 24%, 87%);
+    --magnolia: hsl(217, 100%, 97%);
+    --alabaster: hsl(231, 100%, 99%);
+    --white: hsl(0, 0%, 100%);
+    --black: #000;
+
+
+    /* Fonts Size */
+    --fs-1: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 5rem;
+}
+
+form {
+    display: flex;
+    background: var(--white);
+    box-shadow: 0px 10px 20px -21px var(--black);
+    padding: 1rem;
+    min-height: 60vh;
+}
+
+/* Aside */
+.aside {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    background-image: url("../images/bg-sidebar-desktop.svg");
+    color: var(--white);
+    border-radius: 10px;
+}
+
+.aside > div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.aside__step {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid var(--light-gray);
+    border-radius: 100%;
+    font-size: var(--fs-1);
+    font-weight: 700;
+}
+
+.aside .active {
+    color: var(--marine-blue);
+    background: var(--light-gray);
+}
+
+.aside__title {
+    margin-bottom: .1rem;
+    font-size: clamp(.6rem, 10vw, .75rem);
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--cool-gray);
+}
+
+.aside__text {
+    font-size: var(--fs-1);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+section {
+    flex: 3;
+    padding: 2rem 5rem;
+}
