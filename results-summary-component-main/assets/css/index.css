@@ -1,0 +1,210 @@
+:root {
+    /* === Color === */
+    /* == Color Primary == */
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+
+    /* == Gradient == */
+    /* Background */
+    --light-slate-blue: hsl(252, 100%, 67%);
+    --light-royal-blue: hsl(241, 81%, 54%);
+
+    /* Circle */
+    --violet-blue: hsla(256, 72%, 46%, 1);
+    --persian-blue: hsla(241, 72%, 46%, 0);
+
+    /* == Neutral == */
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+
+    /* === Font Size === */
+    --fs-1: 18px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0rem 1rem;
+}
+
+main > div {
+    display: flex;
+    flex-direction: row;
+    /* max-width: 43%; */
+    margin-bottom: 5rem;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+/* === Left === */
+.left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    padding: 3rem 3rem;
+    background: linear-gradient(180deg, var(--light-slate-blue), var(--light-royal-blue));
+    border-radius: 50px;
+    color: var(--white);
+}
+
+.left-score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+    min-height: 200px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--violet-blue), var(--persian-blue));
+    border-radius: 100%;
+}
+
+.left-score > p:first-child {
+    font-size: clamp(4rem, 10vw, 4.5rem);
+    font-weight: 700;
+}
+
+.left-score > p:last-child {
+    color: var(--light-lavender);
+    font-weight: 600;
+    opacity: .7;
+}
+
+.left-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.left-bottom__great {
+    font-size: clamp(1.2rem, 10vw, 2.2rem);
+    font-weight: 600;
+}
+
+.left-bottom__text {
+    padding: 0rem 1.2rem;
+    color: var(--light-lavender);
+    text-align: center;
+}
+
+/* === Right === */
+.right {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem 3rem;
+}
+
+.right__title {
+    font-weight: 700;
+}
+
+.right-containers {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    font-size: var(--fs-1);
+}
+
+.right-containers-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-containers-items > div {
+    display: flex;
+    gap: 1rem;
+    font-weight: 700;
+}
+
+.right-containers-items:nth-child(1) > div {
+    color: var(--light-red);
+}
+
+.right-containers-items:nth-child(2) > div {
+    color: var(--orangey-yellow);
+}
+
+.right-containers-items:nth-child(3) > div {
+    color: var(--green-teal);
+}
+
+.right-containers-items:nth-child(4) > div {
+    color: var(--cobalt-blue);
+}
+
+.right-containers-items__score {
+    color: var(--light-lavender);
+    font-weight: 700;
+}
+
+.right-containers-items__score > span {
+    color: #000;
+}
+
+.right__button {
+    padding: 1rem;
+    color: var(--white);
+    font-size: var(--fs-1);
+    background: var(--dark-gray-blue);
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+}
+
+
+/* === Media Query Tablet === */
+@media screen and (max-width: 800px) {
+    main {
+        padding: 0rem;
+    }
+
+    main > div {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    /* === Left === */
+    .left {
+        gap: 1.5rem;
+        padding: 2.2rem 3rem;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+    }
+
+    .left-score {
+        min-width: 160px;
+        min-height: 160px;
+    }
+
+    /* === Right === */
+    .right__title {
+        margin-bottom: 3rem;
+    }
+
+    .right__button {
+        margin-top: 3rem;
+    }
+}
